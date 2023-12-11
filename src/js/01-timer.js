@@ -23,7 +23,7 @@ const options = {
     if (selectedDates[0] > Date.now()) {
       userSelectedDate = selectedDates[0];
       startButton.disabled = false;
-      updateTimerDisplay(); // Call the function to display the timer when a date is selected
+      updateTimerDisplay(); // Calling the function to display the timer when a date is selected
     } else {
       userSelectedDate = undefined;
       startButton.disabled = true;
@@ -39,7 +39,7 @@ const options = {
 
 startButton.addEventListener('click', () => {
   if (userSelectedDate) {
-    startTimer(); // Call the function to start the timer
+    startTimer(); // Calling the function to start the timer
   }
 });
 
@@ -54,21 +54,21 @@ function updateTimerDisplay() {
     secondsDisplay.textContent = addLeadingZero(seconds);
   }
 
-  // Check if the timer has reached zero
+  // Checking if the timer has reached zero
   if (timeDifference <= 0) {
     stopTimer();
   }
 }
 
 function startTimer() {
-  // Start the timer, updating the interface every second
+  // Starting the timer, updating the interface every second
   timerInterval = setInterval(updateTimerDisplay, 1000);
 }
 
 function stopTimer() {
-  // Check if the timer has been started before calling clearInterval
+  // Checking if the timer has been started before calling clearInterval
   if (timerInterval) {
-    // Clear the interval to stop the timer
+    // Clearing the interval to stop the timer
     clearInterval(timerInterval);
 
     daysDisplay.textContent = '00';
@@ -76,7 +76,7 @@ function stopTimer() {
     minutesDisplay.textContent = '00';
     secondsDisplay.textContent = '00';
 
-    // Reset the timerInterval variable
+    // Reseting the timerInterval variable
     timerInterval = null;
   }
 }
