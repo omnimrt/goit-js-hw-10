@@ -2,7 +2,6 @@ import flatpickr from 'flatpickr';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import 'flatpickr/dist/flatpickr.min.css';
-import { library, icon } from '@fortawesome/fontawesome-svg-core';
 
 let userSelectedDate;
 let startButton = document.querySelector('[data-start]');
