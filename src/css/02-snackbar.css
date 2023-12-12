@@ -1,0 +1,12 @@
+.form {
+  width: 300px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+fieldset {
+  display: flex;
+  justify-content: center;
+}
